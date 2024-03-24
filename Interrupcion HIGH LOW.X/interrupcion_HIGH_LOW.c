@@ -42,13 +42,13 @@ void main(void) {
     
     while (1) {
         LATA = 0x01;
-        __delay_ms(1000);
+        __delay_ms(500);
         LATA = 0x02;
-        __delay_ms(1000);
+        __delay_ms(500);
         LATA = 0x04;
-        __delay_ms(1000);
+        __delay_ms(500);
         LATA = 0x08;
-        __delay_ms(1000);
+        __delay_ms(500);
     }
 }
 
@@ -59,12 +59,12 @@ void __interrupt(high_priority) INT_EXT_RB1() { // interrupcion externa RB1
             LATDbits.LD1 = 1;
             LATDbits.LD2 = 0;
             LATDbits.LD3 = 0;
-            __delay_ms(500);
+            __delay_ms(10);
             LATDbits.LD0 = 0;
             LATDbits.LD1 = 0;
             LATDbits.LD2 = 1;
             LATDbits.LD3 = 1;
-            __delay_ms(500);
+            __delay_ms(10);
         }
         LATDbits.LD0 = 0;
         LATDbits.LD1 = 0;
@@ -81,18 +81,18 @@ void __interrupt(low_priority) INT_EXT_RB2() { // interrupcion externa RB2
             for (char j = 0; j < 3; j++) {
                 LATDbits.LD4 = 1;
                 LATDbits.LD5 = 1;
-                __delay_ms(500);
+                __delay_ms(10);
                 LATDbits.LD4 = 0;
                 LATDbits.LD5 = 0;
-                __delay_ms(500);
+                __delay_ms(10);
             }
             for (char j = 0; j < 3; j++) {
                 LATDbits.LD6 = 1;
                 LATDbits.LD7 = 1;
-                __delay_ms(500);
+                __delay_ms(10);
                 LATDbits.LD6 = 0;
                 LATDbits.LD7 = 0;
-                __delay_ms(500);
+                __delay_ms(10);
             }
         }
         INTCON3bits.INT2IF = 0; // Limpia la Flag
