@@ -8,7 +8,7 @@ Simulaciones en PROTEUS.
 - [Control de displays de 7 segmentos](./display7segmentos.X/)
 - [Multiplexación](./Multiplexacion.X/)
 - [Control LCD 16x2](./LCD16x2.X/)
-- [ADC-LEDs](./ADC-LCD.X/)
+- [ADC-LEDs](./ADC_Leds.X/)
 - [ADC-LCD](./ADC-LCD.X/)
 - [Interrupciones-RB0](./Interrupcion%20RB0.X/)
 - [Interrupciones-HIGH/LOW](./Interrupcion%20HIGH%20LOW.X/)
